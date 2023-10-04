@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad09</title>
+</head>
+<body>
+    <label for="correo">Correo electrónico</label>
+    <input id="correo" name="correo" type="email"><br><br>
+    <label for="web"></label>Sitio web</label>
+    <input id="web" name="webs" type="url"><br><br>
+    <label for="tele">Teléfono</label>
+    <input id="tele" name="tele" type="tel">
+    <br>
+    <h1>Otro Formulario</h1>
+    <label for="fecha">Fecha: </label>
+<input id="fecha" name="fecha" type="date">
+<br><br>
+<label for="fechayhora">Fecha y hora: </label>
+<input id="fechayhora" name="fechayhora" type="datetime">
+<br><br>
+<label for="fechayhoralocal">Fecha y hora local: </label>
+<input id="fechayhoralocal" name="fechayhoralocal"
+type="datetime-local">
+<br><br>
+<label for="hora">Hora: </label>
+<input id="hora" name="hora" type="time">
+<br><br>
+<label for="mes">Mes: </label>
+<input id="mes" name="mes" type="month"><br><br>
+<label for="rango">PELOS</label>
+<input type="range" min="0" max="20" step="2" name="rango" id="rango">
+<input type="number" id="numero" name="numero">
+<script>
+const rango = document.getElementById("rango")
+const numero = document.getElementById("numero")
+rango.onchange = function(){
+numero.value = rango.value;
+}
+</script>
+<h2> Otro Formulario</h2><br><br>
+<form action="gestiona.php" method="get">
+    <label for="dia">Elige tu día de la semana:</label>
+    <input list="dias" name="dia" id="dia">
+    <datalist id="dias">
+    <option value="Lunes">
+    <option value="Martes">
+    <option value="Miércoles">
+    <option value="Jueves">
+    <option value="Viernes">
+    <option value="Sábado">
+    <option value="Domingo">
+    </datalist>
+    <input type="submit">
+    </form>
+    <br>
+    <h3>Otro</h3>
+
+    <form action="gestiona_datos.php">
+        <label for="dni">NIF:</label>
+        <input type="text" id="dni" name="dni" pattern="(([X-Z]{1})([-]?)(\d{7})([-
+        ]?)([A-Z]{1}))|((\d{8})([-]?)([A-Z]{1}))" title="Debes incluir un DNI correcto
+        con 9 números y la letra en mayúscula"><br><br>
+        <input type="submit">
+        </form>
+        <h3>Otro</h3>
+        <label for="cp">Código postal:</label>
+<input type="text" id="cp" name="cp" pattern="[0-9]{5}" title="Debes incluir una
+Código postal correcto" placeholder="Incluye los 5
+número"><br><br>
+<input type="submit">
+<h3>Otro</h3><br><br>
+<label>Nombre: </label>
+<input type="text" id="nombre" name="nombre" placeholder="Tu nombre aquí“
+><label>Apellidos: </label>
+<input type="text" id="nombre" name="nombre" placeholder="Tus apellidos aquí">
+</body>
+</html>
